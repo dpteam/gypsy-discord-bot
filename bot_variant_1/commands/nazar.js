@@ -58,7 +58,7 @@ const getColor = day => {
 
 module.exports = {
   name: "nazar",
-  description: "Respond with Madam Nazar location",
+  description: "Ответ с местонахождением Мадам Назар",
   execute(message, args) {
     fetch(
       "https://madam-nazar-location-api.herokuapp.com/location/current"
@@ -68,29 +68,29 @@ module.exports = {
         return response
           .json()
           .then(function(json) {
-            const botAnswer = `🔎 In the region of **${capitalize(
+            const botAnswer = `🔎 В регионе **${capitalize(
               json.data.location.region.precise
-            )}**, in the territory of **${capitalize(
+            )}**, на территории **${capitalize(
               json.data.location.region.name
             )}**.`;
 
             const embed = new RichEmbed()
               .setTitle(`🚩 Madam Nazar was found!`)
               .setURL("https://madamnazar.io/")
-              .addField("Cycle/Day", getCycleDay(), true)
-              .addField("🗓 Today ", `${formatDateTweet(new Date())}`, true)
+              .addField("Цикл/День", getCycleDay(), true)
+              .addField("🗓 Сегодня ", `${formatDateTweet(new Date())}`, true)
               .setColor(getColor(getCycleDay()))
-              .setImage(json.data.location.image.normal.full)
+              .setImage(json.data.location.image.normal)
               .setDescription(botAnswer)
               .setTimestamp()
               .setFooter(
-                "🔮 Yσυ'ɾҽ ɳσƚ ყҽƚ ƚσσ ɱყʂƚҽɾισυʂ ϝσɾ ɱყ ԋυɱႦʅҽ ƈσɱραɳყ"
+                "🔮 𝕭ы 𝖊щ𝖊 𝕳𝖊 𝖈ли𝖜𝖐𝖔𝕸 т𝖆и𝕳𝖈т𝖇𝖊𝕳𝕳ы для 𝕸𝖔𝖊г𝖔 𝖈𝖐𝖕𝖔𝕸𝕳𝖔г𝖔 𝖔бщ𝖊𝖈т𝖇𝖆"
               );
             message.channel.send(embed);
           })
           .catch(err => {
             console.log(err);
-            message.channel.send(`⚠️ Problem occured: **${err}**`);
+            message.channel.send(`⚠️ Возникла проблема: **${err}**`);
           });
       } else {
         message.channel.send(

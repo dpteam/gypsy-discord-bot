@@ -8,19 +8,19 @@ module.exports = {
     // inside a command, event listener, etc.
     const test = new RichEmbed()
       .setColor('#f30b03')
-      .setTitle('Some title')
+      .setTitle('Какой-то заголовок')
       .setURL('https://madamnazar.io/')
-      .setAuthor('Some name', 'https://pbs.twimg.com/profile_images/1182324129296506880/gBjY7ch-_400x400.jpg', 'https://madamnazar.io/')
-      .setDescription('Some description here')
+      .setAuthor('Какое-то имя', 'https://pbs.twimg.com/profile_images/1182324129296506880/gBjY7ch-_400x400.jpg', 'https://madamnazar.io/')
+      .setDescription('Какое-то описание')
       .setThumbnail('https://pbs.twimg.com/profile_images/1182324129296506880/gBjY7ch-_400x400.jpg')
-      .addField('Regular field title', 'Some value here')
+      .addField('Обычный заголовок поля', 'Какое-то значение здесь')
       .addBlankField()
-      .addField('Inline field title', 'Some value here', true)
-      .addField('Inline field title', 'Some value here', true)
-      .addField('Inline field title', 'Some value here', true)
+      .addField('Заголовок встроенного поля', 'Какое-то значение здесь', true)
+      .addField('Заголовок встроенного поля', 'Какое-то значение здесь', true)
+      .addField('Заголовок встроенного поля', 'Какое-то значение здесь', true)
       .setImage('https://pbs.twimg.com/profile_images/1182324129296506880/gBjY7ch-_400x400.jpg')
       .setTimestamp()
-      .setFooter('Some footer text here', 'https://pbs.twimg.com/profile_images/1182324129296506880/gBjY7ch-_400x400.jpg');
+      .setFooter('Немного текста нижнего колонтитула здесь', 'https://pbs.twimg.com/profile_images/1182324129296506880/gBjY7ch-_400x400.jpg');
 
     message.channel.send(test);   
 	}

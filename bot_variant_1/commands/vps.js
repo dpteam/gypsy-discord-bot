@@ -1,7 +1,7 @@
 module.exports = {
 	name: 'vps',
-	description: 'first command on vps',
+	description: 'первая команда на vps',
 	execute(message, args) {
-		message.channel.send('Madam Nazar Bot - VPS auto reload');
+		message.channel.send('Бот Цыганка - автоматическая перезагрузка VPS');
 	},
 };

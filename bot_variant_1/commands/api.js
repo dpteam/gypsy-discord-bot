@@ -22,18 +22,18 @@ module.exports = {
       if (contentType && contentType.indexOf("application/json") !== -1) {
         return response.json().then(function(json) {
           console.log(json.data.location.image);
-          const botAnswer = `🚩 Today ${formatDateTweet(
+          const botAnswer = `🚩 Сегоднф ${formatDateTweet(
             new Date()
-          )} 📅, Madam Nazar was found in the region of **${capitalize(
+          )} 📅, Мадам Назар была найдена в районе **${capitalize(
             json.data.location.region.precise
-          )}** in the **${capitalize(json.data.location.region.name)}** territory ${
-            json.data.location.image.normal.full
+          )}** в **${capitalize(json.data.location.region.name)}** territory ${
+            json.data.location.image.normal
           }`;
               message.channel.send(botAnswer);
 
         });
       } else {
-        console.log("Oops, nous n'avons pas du JSON!");
+        console.log("Ой, у нас нет JSON!");
       }
     });
   }
