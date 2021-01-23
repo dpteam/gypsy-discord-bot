@@ -75,7 +75,7 @@ module.exports = {
             )}**.`;
 
             const embed = new RichEmbed()
-              .setTitle(`🚩 Madam Nazar was found!`)
+              .setTitle(`🚩 Мадам Назар была найдена!`)
               .setURL("https://madamnazar.io/")
               .addField("Цикл/День", getCycleDay(), true)
               .addField("🗓 Сегодня ", `${formatDateTweet(new Date())}`, true)
