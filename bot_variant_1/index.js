@@ -14,7 +14,6 @@ for (const file of commandFiles) {
 
 client.on('ready', () => {
   console.log(`Вошла в систему как ${client.user.tag}!\nЯ готова!\nСписок команд:\n1. nazar\n2. cycle\n3. embed\n4. api\n5. ping\n6. vps\n7. welcome`);;
-
   client.user.setActivity('madamnazar.io');
 });
 

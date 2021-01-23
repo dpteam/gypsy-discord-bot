@@ -80,7 +80,7 @@ module.exports = {
               .addField("Цикл/День", getCycleDay(), true)
               .addField("🗓 Сегодня ", `${formatDateTweet(new Date())}`, true)
               .setColor(getColor(getCycleDay()))
-              .setImage(json.data.location.image.normal)
+              .setImage(json.data.location.image)
               .setDescription(botAnswer)
               .setTimestamp()
               .setFooter(

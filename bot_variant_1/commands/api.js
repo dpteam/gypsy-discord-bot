@@ -27,7 +27,7 @@ module.exports = {
           )} 📅, Мадам Назар была найдена в районе **${capitalize(
             json.data.location.region.precise
           )}** в **${capitalize(json.data.location.region.name)}** territory ${
-            json.data.location.image.normal
+            json.data.location.image
           }`;
               message.channel.send(botAnswer);
 
